@@ -19,8 +19,10 @@
 		375A7ADC19B5A94000373F8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A7ADB19B5A94000373F8C /* UIKit.framework */; };
 		375A7ADE19B5A94400373F8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A7ADD19B5A94400373F8C /* Foundation.framework */; };
 		375A7AE419B834E900373F8C /* VideoCaptureViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 375A7AE319B834E900373F8C /* VideoCaptureViewController.mm */; };
-		375A7AE719B835F200373F8C /* EdgeDetectingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 375A7AE619B835F200373F8C /* EdgeDetectingViewController.mm */; };
+		375A7AE719B835F200373F8C /* CannyEdgeDetectingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 375A7AE619B835F200373F8C /* CannyEdgeDetectingViewController.mm */; };
 		375A7AEA19B8381400373F8C /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A7AE919B8381400373F8C /* Rectangle.m */; };
+		375A7AED19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 375A7AEC19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.mm */; };
+		375A7AFC19BC21C600373F8C /* EdgeDetectingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 375A7AFB19BC21C600373F8C /* EdgeDetectingViewController.mm */; };
 		37DE225819B5A0A1005FEF2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE225719B5A0A1005FEF2D /* main.m */; };
 		37DE225B19B5A0A1005FEF2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE225A19B5A0A1005FEF2D /* AppDelegate.m */; };
 		37DE226619B5A0A1005FEF2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DE226519B5A0A1005FEF2D /* Images.xcassets */; };
@@ -44,10 +46,14 @@
 		375A7ADD19B5A94400373F8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		375A7AE219B834E900373F8C /* VideoCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureViewController.h; sourceTree = "<group>"; };
 		375A7AE319B834E900373F8C /* VideoCaptureViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoCaptureViewController.mm; sourceTree = "<group>"; };
-		375A7AE519B835F200373F8C /* EdgeDetectingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeDetectingViewController.h; sourceTree = "<group>"; };
-		375A7AE619B835F200373F8C /* EdgeDetectingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EdgeDetectingViewController.mm; sourceTree = "<group>"; };
+		375A7AE519B835F200373F8C /* CannyEdgeDetectingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CannyEdgeDetectingViewController.h; sourceTree = "<group>"; };
+		375A7AE619B835F200373F8C /* CannyEdgeDetectingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CannyEdgeDetectingViewController.mm; sourceTree = "<group>"; };
 		375A7AE819B8381400373F8C /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		375A7AE919B8381400373F8C /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		375A7AEB19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoughLineEdgeDetectingViewController.h; sourceTree = "<group>"; };
+		375A7AEC19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HoughLineEdgeDetectingViewController.mm; sourceTree = "<group>"; };
+		375A7AFA19BC21C600373F8C /* EdgeDetectingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeDetectingViewController.h; sourceTree = "<group>"; };
+		375A7AFB19BC21C600373F8C /* EdgeDetectingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EdgeDetectingViewController.mm; sourceTree = "<group>"; };
 		37DE225219B5A0A1005FEF2D /* OpenCVCameraSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVCameraSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DE225619B5A0A1005FEF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DE225719B5A0A1005FEF2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,8 +125,12 @@
 			children = (
 				375A7AE819B8381400373F8C /* Rectangle.h */,
 				375A7AE919B8381400373F8C /* Rectangle.m */,
-				375A7AE519B835F200373F8C /* EdgeDetectingViewController.h */,
-				375A7AE619B835F200373F8C /* EdgeDetectingViewController.mm */,
+				375A7AFA19BC21C600373F8C /* EdgeDetectingViewController.h */,
+				375A7AFB19BC21C600373F8C /* EdgeDetectingViewController.mm */,
+				375A7AE519B835F200373F8C /* CannyEdgeDetectingViewController.h */,
+				375A7AE619B835F200373F8C /* CannyEdgeDetectingViewController.mm */,
+				375A7AEB19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.h */,
+				375A7AEC19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.mm */,
 				375A7AE219B834E900373F8C /* VideoCaptureViewController.h */,
 				375A7AE319B834E900373F8C /* VideoCaptureViewController.mm */,
 				375A7AC119B5A81700373F8C /* RectangleCALayer.h */,
@@ -250,11 +260,13 @@
 			files = (
 				375A7AC919B5A81700373F8C /* RectangleCALayer.m in Sources */,
 				375A7AEA19B8381400373F8C /* Rectangle.m in Sources */,
-				375A7AE719B835F200373F8C /* EdgeDetectingViewController.mm in Sources */,
+				375A7AE719B835F200373F8C /* CannyEdgeDetectingViewController.mm in Sources */,
 				375A7AE419B834E900373F8C /* VideoCaptureViewController.mm in Sources */,
 				37DE225B19B5A0A1005FEF2D /* AppDelegate.m in Sources */,
 				37DE225819B5A0A1005FEF2D /* main.m in Sources */,
 				375A7ACA19B5A81700373F8C /* UIImage+OpenCV.mm in Sources */,
+				375A7AED19BAD14E00373F8C /* HoughLineEdgeDetectingViewController.mm in Sources */,
+				375A7AFC19BC21C600373F8C /* EdgeDetectingViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

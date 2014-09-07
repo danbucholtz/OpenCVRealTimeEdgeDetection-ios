@@ -1,8 +1,8 @@
 //
 //  EdgeDetectingViewController.h
-//  OpenCVVideoFeedSample
+//  OpenCVCameraSample
 //
-//  Created by Dan Bucholtz on 9/2/14.
+//  Created by Dan Bucholtz on 9/7/14.
 //  Copyright (c) 2014 NXSW. All rights reserved.
 //
 

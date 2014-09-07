@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "EdgeDetectingViewController.h"
+#import "CannyEdgeDetectingViewController.h"
+#import "HoughLineEdgeDetectingViewController.h"
 
 @implementation AppDelegate
 
@@ -19,7 +20,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    EdgeDetectingViewController * vc = [[EdgeDetectingViewController alloc] init];
+    CannyEdgeDetectingViewController * vc = [[CannyEdgeDetectingViewController alloc] init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     
